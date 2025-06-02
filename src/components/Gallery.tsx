@@ -33,7 +33,7 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
     <div className="my-20 px-4 md:px-8 lg:px-16">
       {/* Image Grid */}
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {images.map((img, i) => (
+        {images.map((img,i) => (
           <div
             key={i}
             className="relative overflow-hidden rounded-xl shadow-md group hover:shadow-xl transition duration-300 cursor-pointer"

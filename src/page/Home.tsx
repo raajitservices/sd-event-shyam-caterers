@@ -7,8 +7,6 @@ import Footer from '../components/Footer';
 import Navbar from '../components/NavBar';
 
 
-
-
 const Home = () => (
   <>
     <Navbar />
@@ -17,10 +15,10 @@ const Home = () => (
     <BookingAndPricing />
     <Contact />
     <About />
-    <Footer />
-
     
-
+    
+    <Footer />
+  
   </>
 );
 

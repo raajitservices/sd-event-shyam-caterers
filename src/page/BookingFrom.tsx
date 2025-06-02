@@ -9,9 +9,7 @@ interface Props {
 
 
 const BookingForm: React.FC<Props> = ({ onClose }) => {
-  const [selectedService, setSelectedService] = useState('');
-
-
+  const [selectedService, setSelectedService] = useState('');         
   const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedService(e.target.value);
     // reset when switching
@@ -52,38 +50,7 @@ const BookingForm: React.FC<Props> = ({ onClose }) => {
             <option value="catering">Catering</option>
           </select>
 
-          {/* Show event options
-          {selectedService === 'event' && (
-            <select
-              className="w-full border p-2 rounded"
-              value={selectedOption}
-              onChange={(e) => setSelectedOption(e.target.value)}
-            >
-              <option value="">Select Event Type</option>
-              {eventCards.map((item, index) => (
-                <option key={index} value={item.title}>
-                  {item.title}
-                </option>
-              ))}
-            </select>
-          )} */}
-
-          {/* Show catering options */}
-          {/* {selectedService === 'catering' && (
-            <select
-              className="w-full border p-2 rounded"
-              value={selectedOption}
-              onChange={(e) => setSelectedOption(e.target.value)}
-            >
-              <option value="">Select Catering Type</option>
-              {cateringCards.map((item, index) => (
-                <option key={index} value={item.title}>
-                  {item.title}
-                </option>
-              ))}
-            </select>
-          )} */}
-
+        
           <button type="submit" className="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700">
             Submit
           </button>

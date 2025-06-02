@@ -52,8 +52,9 @@ const Navbar: React.FC = () => {
             {/* Event dropdown (desktop) */}
             <div
               className="relative"
-              onMouseEnter={() => setEventOpen(true)}
-              onMouseLeave={() => setEventOpen(false)}
+               onClick={() => setEventOpen(true)}
+               onMouseEnter={() => setEventOpen(true)}
+               onMouseLeave={() => setEventOpen(false)}
             >
               <button className="text-white hover:text-yellow-200 font-medium flex items-center">
                 Event
@@ -77,6 +78,7 @@ const Navbar: React.FC = () => {
             {/* Catering dropdown (desktop) */}
             <div
               className="relative"
+              onClick={() => setCateringOpen(true)}
               onMouseEnter={() => setCateringOpen(true)}
               onMouseLeave={() => setCateringOpen(false)}
             >
@@ -103,6 +105,7 @@ const Navbar: React.FC = () => {
             {/* More dropdown */}
             <div
               className="relative"
+              onClick={() => setMenuOpen(true)}
               onMouseEnter={() => setMoreOpen(true)}
               onMouseLeave={() => setMoreOpen(false)}
             >
