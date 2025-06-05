@@ -15,7 +15,3 @@ export const cateringGallery = [
   '/images/catering/catering5.jpg',
 ];
 
-interface GalleryProps {
-  images: string[];
-  title: string;
-}

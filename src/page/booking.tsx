@@ -5,7 +5,7 @@ import BookingForm from './BookingFrom'; // Adjust the import path as necessary
 
 interface Plan {
   title: string;
-  price: string;
+
   features: string[];
   icon: React.ReactElement;
   popular?: boolean;
@@ -43,14 +43,14 @@ const colorMap = {
 const plans: Plan[] = [
   {
     title: 'Basic',
-    price: '₹10,000',
+   
     features: ['Venue Setup', '2 Dishes', '1 Staff'],
     icon: <Gem size={36} />,
     color: 'indigo',
   },
   {
     title: 'Premium',
-    price: '₹25,000',
+ 
     features: ['Venue Setup', '5 Dishes', '2 Staff', 'Decoration'],
     icon: <Star size={36} />,
     popular: true,
@@ -58,7 +58,7 @@ const plans: Plan[] = [
   },
   {
     title: 'Royal',
-    price: '₹50,000',
+   
     features: ['Full Event Management', '10 Dishes', 'Live Counters', 'Full Decoration & Sound'],
     icon: <Crown size={36} />,
     color: 'purple',
@@ -81,7 +81,7 @@ const PricingPlans: React.FC = () => {
         </h2>
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {plans.map(({ title, price, features, icon, popular, color }) => {
+          {plans.map(({ title,  features, icon, popular, color }) => {
             const c = colorMap[color];
             return (
               <div
@@ -102,7 +102,7 @@ const PricingPlans: React.FC = () => {
                 {/* Card Body */}
                 <div className="p-8">
                   <h3 className={`text-2xl font-bold ${c.text}`}>{title}</h3>
-                  <p className="mt-4 text-3xl font-extrabold text-gray-900">{price}</p>
+                  <p className="mt-4 text-3xl font-extrabold text-gray-900">{}</p>
 
                   <ul className="mt-6 space-y-3">
                     {features.map((f) => (

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
  import logo1 from '../asset/logo1.jpg'; // Adjust the path as necessary
 import logo2 from '../asset/logo2.png'; // Adjust the path as necessary
 
+
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [eventOpen, setEventOpen] = useState(false);
@@ -11,41 +12,43 @@ const Navbar: React.FC = () => {
   const [moreOpen, setMoreOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-indigo-700 via-pink-600 to-purple-700 shadow-xl fixed top-0 w-full z-50 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+    <nav className="fixed top-0 z-50 w-full font-sans shadow-xl bg-gradient-to-r from-indigo-700 via-pink-600 to-purple-700">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
 
           {/* logo */}
-         <Link to="/" className="flex items-center gap-3 text-white font-extrabold text-xl md:text-2xl tracking-wide hover:opacity-90 transition">
-  <div className="flex items-center space-x-3">
+         <Link to="/" className="flex items-center gap-3 text-xl font-extrabold tracking-wide text-white transition md:text-2xl hover:opacity-90">
+  <div className="flex items-center space-x-2">
     {/* Logo 1 */}
     <img
       src={logo1}
       alt="Logo 1"
-      className="h-10 w-auto rounded-full shadow-md ring- ring-black/20 hover:ring-yellow-300 transition duration-300 ease-in-out"
+      className="w-auto h-10 transition duration-300 ease-in-out rounded-full shadow-md ring- ring-black/20 hover:ring-yellow-300"
       style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
     />
 
     {/* Brand Text & Logo 2 */}
-    <div className="hidden sm:flex items-center space-x-2">
+    <div className="items-center hidden space-x-1 sm:flex">
       <span className="text-yellow-200">SD Event</span>
       <span className="text-white">&</span>
       <span className="text-purple-200">Shree Shyam Food Caterers</span>
+<div className="hidden lg:block">
 
       <img
         src={logo2}
         alt="Logo 2"
-        className="h-10 w-auto rounded-full shadow-md ring-1 ring-white"
+        className="w-auto h-10  rounded-full shadow-md ring-1 ring-white"
       />
     </div>
+  </div>
   </div>
 </Link>
 
 
           {/* desktop menu */}
-          <div className="hidden md:flex space-x-6 items-center">
+          <div className="items-center hidden space-x-5 md:flex">
 
-            <Link to="/" className="text-white hover:text-yellow-200 font-medium transition">
+            <Link to="/" className="font-medium text-white transition hover:text-yellow-200">
               Home
             </Link>
 
@@ -56,9 +59,9 @@ const Navbar: React.FC = () => {
                onMouseEnter={() => setEventOpen(true)}
                onMouseLeave={() => setEventOpen(false)}
             >
-              <button className="text-white hover:text-yellow-200 font-medium flex items-center">
+              <button className="flex items-center font-medium text-white hover:text-yellow-200">
                 Event
-                <svg className="ml-1 w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <svg className="w-4 h-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.23 8.27a.75.75 0 01.02-1.06z" />
                 </svg>
               </button>
@@ -66,7 +69,7 @@ const Navbar: React.FC = () => {
               {eventOpen && (
                 <Link
                   to="/all-events"
-                  className="absolute left-0 mt-2 w-52 bg-white text-indigo-700 rounded-xl shadow-lg py-2 z-50"
+                  className="absolute left-0 z-50 py-2 mt-2 text-indigo-700 bg-white shadow-lg w-52 rounded-xl"
                 >
                   <div className="px-4 py-2 hover:bg-indigo-100">Weddings</div>
                   <div className="px-4 py-2 hover:bg-indigo-100">Corporate</div>
@@ -82,9 +85,9 @@ const Navbar: React.FC = () => {
               onMouseEnter={() => setCateringOpen(true)}
               onMouseLeave={() => setCateringOpen(false)}
             >
-              <button className="text-white hover:text-yellow-200 font-medium flex items-center">
+              <button className="flex items-center font-medium text-white hover:text-yellow-200">
                 Catering
-                <svg className="ml-1 w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <svg className="w-4 h-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.23 8.27a.75.75 0 01.02-1.06z" />
                 </svg>
               </button>
@@ -92,7 +95,7 @@ const Navbar: React.FC = () => {
               {cateringOpen && (
                 <Link
                   to="/all-catering"
-                  className="absolute left-0 mt-2 w-52 bg-white text-purple-700 rounded-xl shadow-lg py-2 z-50"
+                  className="absolute left-0 z-50 py-2 mt-2 text-purple-700 bg-white shadow-lg w-52 rounded-xl"
                 >
                   <div className="px-4 py-2 hover:bg-purple-100">Veg</div>
                   <div className="px-4 py-2 hover:bg-purple-100">Non-Veg</div>
@@ -109,15 +112,15 @@ const Navbar: React.FC = () => {
               onMouseEnter={() => setMoreOpen(true)}
               onMouseLeave={() => setMoreOpen(false)}
             >
-              <button className="text-white hover:text-yellow-200 font-medium flex items-center">
+              <button className="flex items-center font-medium text-white hover:text-yellow-200">
                 More
-                <svg className="ml-1 w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <svg className="w-4 h-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.23 8.27a.75.75 0 01.02-1.06z" />
                 </svg>
               </button>
 
               {moreOpen && (
-                <div className="absolute left-0 mt-2 w-52 bg-white text-gray-700 rounded-xl shadow-lg py-2 z-50">
+                <div className="absolute left-0 z-50 py-2 mt-2 text-gray-700 bg-white shadow-lg w-52 rounded-xl">
                   <Link to="/gallery" className="block px-4 py-2 hover:bg-gray-100">Gallery</Link>
                   <Link to="/testimonials" className="block px-4 py-2 hover:bg-gray-100">Testimonials</Link>
                   <Link to="/team" className="block px-4 py-2 hover:bg-gray-100">Meet The Team</Link>
@@ -126,16 +129,16 @@ const Navbar: React.FC = () => {
               )}
             </div>
 
-            <Link to="/about" className="text-white hover:text-yellow-200 font-medium transition">About</Link>
-            <Link to="/contact" className="text-white hover:text-yellow-200 font-medium transition">Contact</Link>
+            <Link to="/about" className="font-medium text-white transition hover:text-yellow-200">About</Link>
+            <Link to="/contact" className="font-medium text-white transition hover:text-yellow-200">Contact</Link>
           </div>
 
           {/* mobile toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-white focus:outline-none"
+            className="text-white md:hidden focus:outline-none"
           >
-            <svg className="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+            <svg className="w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" fill="none">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -153,25 +156,56 @@ const Navbar: React.FC = () => {
 
       {/* mobile menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4 bg-indigo-800 space-y-2">
+        <div className="px-4 pb-4 space-y-2 bg-indigo-800 md:hidden">
 
           <Link to="/" className="block py-2 text-white hover:text-yellow-200">Home</Link>
+{/* Events mobile dropdown */}
+<div>
+  <button
+    onClick={() => setEventOpen(!eventOpen)}
+    className="flex items-center justify-between w-full py-2 text-left text-white"
+  >
+    Events
+    <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.23 8.27a.75.75 0 01.02-1.06z" />
+    </svg>
+  </button>
+  {eventOpen && (
+    <div className="pl-4 space-y-1">
+      <Link to="/all-events#weddings" className="block py-1 text-white hover:text-gray-200">Weddings</Link>
+      <Link to="/all-events#corporate" className="block py-1 text-white hover:text-gray-200">Corporate</Link>
+      <Link to="/all-events#concerts" className="block py-1 text-white hover:text-gray-200">Concerts</Link>
+    </div>
+  )}
+</div>
 
-          {/* Events mobile link */}
-          <Link to="/all-events" className="block py-2 text-white hover:text-yellow-200">
-            Events
-          </Link>
+{/* Catering mobile dropdown */}
+<div>
+  <button
+    onClick={() => setCateringOpen(!cateringOpen)}
+    className="flex items-center justify-between w-full py-2 text-left text-white"
+  >
+    Catering
+    <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+      <path d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.23 8.27a.75.75 0 01.02-1.06z" />
+    </svg>
+  </button>
+  {cateringOpen && (
+    <div className="pl-4 space-y-1">
+      <Link to="/all-catering#veg" className="block py-1 text-white hover:text-gray-200">Veg</Link>
+      <Link to="/all-catering#nonveg" className="block py-1 text-white hover:text-gray-200">Non-Veg</Link>
+      <Link to="/all-catering#snacks" className="block py-1 text-white hover:text-gray-200">Snacks</Link>
+      <Link to="/all-catering#packages" className="block py-1 text-white hover:text-gray-200">Packages</Link>
+    </div>
+  )}
+</div>
 
-          {/* Catering mobile link */}
-          <Link to="/all-catering" className="block py-2 text-white hover:text-yellow-200">
-            Catering
-          </Link>
 
           {/* More submenu */}
           <div>
             <button
               onClick={() => setMoreOpen(!moreOpen)}
-              className="w-full text-left py-2 text-white flex items-center justify-between"
+              className="flex items-center justify-between w-full py-2 text-left text-white"
             >
               More
               <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
@@ -187,7 +221,6 @@ const Navbar: React.FC = () => {
               </div>
             )}
           </div>
-
           <Link to="/about" className="block py-2 text-white hover:text-yellow-200">About</Link>
           <Link to="/contact" className="block py-2 text-white hover:text-yellow-200">Contact</Link>
         </div>
