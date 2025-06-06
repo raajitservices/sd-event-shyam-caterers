@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
  import logo1 from '../asset/logo1.jpg'; // Adjust the path as necessary
-import logo2 from '../asset/logo2.png'; // Adjust the path as necessary
+import logo2 from '../asset/logo2.jfif' // Adjust the path as necessary
 
 
 const Navbar: React.FC = () => {

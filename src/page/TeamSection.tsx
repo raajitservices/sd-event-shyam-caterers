@@ -5,7 +5,7 @@ import Navbar from '../components/NavBar';
 
 const TeamSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-indigo-50" id="team">
+    <section className=" flex py-20 bg-gradient-to-b from-white to-indigo-50" id="team">
       <Navbar></Navbar>
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold text-indigo-700 mb-6">Meet the Team</h2>
@@ -13,11 +13,11 @@ const TeamSection = () => {
           Our experienced professionals bring your vision to life with passion and precision.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-10">
+       <div className=" md:grid-cols-3 flex ">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-transform transform hover:-translate-y-1"
+              className="bg-white  justify-center  rounded-xl shadow-lg p-6 hover:shadow-xl transition-transform transform hover:-translate-y-1"
             >
               <img
                 src={member.image}

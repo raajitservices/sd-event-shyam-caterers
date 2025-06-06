@@ -51,7 +51,7 @@ const [userData, setUserData] = useState<Booking[]>([]);
            useEffect(()=>{
              const featchBookings = async () => {
               try{
-                   const querySnapshot=await getDocs(collection(db,'bookings'));
+                   const querySnapshot=await getDocs(collection(db,'Booking'));
                    const bookingsData = querySnapshot.docs.map((doc) => ({
                      id: doc.id,
                       ...doc.data(),
@@ -70,7 +70,7 @@ const [userData, setUserData] = useState<Booking[]>([]);
    const handleDelete = async (id: string) => {
 if(!window.confirm("Are you sure you want to delete this booking?")) return;
      try {
-      await deleteDoc(doc(db, 'bookings', id));
+      await deleteDoc(doc(db, 'Booking', id));
       setUserData((prevData) => prevData.filter((user) => user.id !== id)); 
      }
       catch (error) {

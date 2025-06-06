@@ -5,6 +5,7 @@ import Contact from '../components/contact';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import Navbar from '../components/NavBar';
+import TeamSection from './TeamSection';
 
 
 const Home = () => (
@@ -15,6 +16,7 @@ const Home = () => (
     <BookingAndPricing />
     <Contact />
     <About />
+    <TeamSection></TeamSection>
     
     
     <Footer />

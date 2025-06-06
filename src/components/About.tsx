@@ -29,12 +29,11 @@ const About = () => {
             <div className="flex justify-center gap-6 mt-10 text-lg">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <Facebook size={24} className="text-blue-600 transition-colors hover:text-blue-800" />
-      
           </a>
-                    <a href="https://www.instagram.com/s.d.events/profilecard/?igsh=ZWxzeml3bXA3YWtk" target="_blank" rel="noopener noreferrer">
+                 <a href="https://www.instagram.com/s.d.events/profilecard/?igsh=ZWxzeml3bXA3YWtk" target="_blank" rel="noopener noreferrer">
                <Instagram size={24} className="text-pink-500 transition-colors hover:text-pink-700" />
   </a>
-           <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+           <a href="https://wa.me/message/HFQHWZEOVB6BM1" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
           <MessageCircleMore size={24} className="text-green-600 transition-colors hover:text-green-800" />
              </a>
            

@@ -27,7 +27,7 @@ const BookingForm: React.FC<Props> = ({ onClose }) => {
   const HandleSubmit =async (e: React.FormEvent) => {
     e.preventDefault();
       try{
-           await addDoc(collection(db,'bookings'), {name,
+           await addDoc(collection(db ,'Booking'), {name,
           contactNumber,
           date,
           numberOfGuests,

@@ -22,3 +22,9 @@ declare module '*.avif' {
   const content: string;
   export default content;
 }
+
+
+declare module '*.jfif' {
+  const content: string;
+  export default content;
+}
