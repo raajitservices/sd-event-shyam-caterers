@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
               {moreOpen && (
                 <div className="absolute left-0 z-50 py-2 mt-2 text-gray-700 bg-white shadow-lg w-52 rounded-xl">
                   <Link to="/gallery" className="block px-4 py-2 hover:bg-gray-100">Gallery</Link>
-                  <Link to="/testimonials" className="block px-4 py-2 hover:bg-gray-100">Testimonials</Link>
+                  {/* <Link to="/testimonials" className="block px-4 py-2 hover:bg-gray-100">Testimonials</Link> */}
                   <Link to="/team" className="block px-4 py-2 hover:bg-gray-100">Meet The Team</Link>
                   <Link to="/faqs" className="block px-4 py-2 hover:bg-gray-100">FAQ</Link>
                 </div>
@@ -215,7 +215,7 @@ const Navbar: React.FC = () => {
             {moreOpen && (
               <div className="pl-4 space-y-1">
                 <Link to="/gallery" className="block py-1 text-white hover:text-gray-200">Gallery</Link>
-                <Link to="/testimonials" className="block py-1 text-white hover:text-gray-200">Testimonials</Link>
+                {/* <Link to="/testimonials" className="block py-1 text-white hover:text-gray-200">Testimonials</Link> */}
                 <Link to="/team" className="block py-1 text-white hover:text-gray-200">Meet The Team</Link>
                 <Link to="/faqs" className="block py-1 text-white hover:text-gray-200">FAQ</Link>
               </div>

@@ -17,7 +17,7 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white  justify-center  rounded-xl shadow-lg p-6 hover:shadow-xl transition-transform transform hover:-translate-y-1"
+              className="bg-white  mr-3.5 rounded-xl shadow-lg p-6 hover:shadow-xl transition-transform transform hover:-translate-y-1"
             >
               <img
                 src={member.image}
